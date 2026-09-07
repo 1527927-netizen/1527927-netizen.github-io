@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Han Sumaq Mochis | Un viaje de Japón a Perú</title>
+<meta name="description" content="Han Sumaq Mochis: mochis artesanales que fusionan la tradición japonesa con sabores representativos del Perú.">
+<style>
+:root{
+  --pink:#f7c7d9;
+  --pink-dark:#e89ab8;
+  --cream:#fffaf3;
+  --gold:#f4c85b;
+  --brown:#7b5948;
+  --dark:#3e302a;
+  --white:#fff;
+  --shadow:0 14px 35px rgba(93,62,49,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dark);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:20;background:rgba(255,250,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(123,89,72,.1)}
+.nav-inner{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:900;color:var(--brown);font-size:1.15rem;letter-spacing:.3px}
+.brand span{color:var(--pink-dark)}
+.nav-links{display:flex;gap:22px;font-weight:650;font-size:.93rem}
+.nav-links a:hover{color:var(--pink-dark)}
+.hero{min-height:100vh;padding:120px 22px 70px;display:grid;place-items:center;overflow:hidden;
+background:radial-gradient(circle at 15% 25%,rgba(247,199,217,.55),transparent 30%),
+radial-gradient(circle at 85% 25%,rgba(244,200,91,.3),transparent 28%),var(--cream)}
+.hero-grid{max-width:1150px;width:100%;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
+.kicker{display:inline-block;background:var(--white);padding:8px 15px;border-radius:999px;box-shadow:var(--shadow);font-weight:800;color:var(--brown);margin-bottom:18px}
+h1{font-size:clamp(3rem,7vw,5.9rem);line-height:.95;letter-spacing:-4px;color:var(--brown)}
+h1 span{color:var(--pink-dark)}
+.hero p{font-size:1.18rem;max-width:610px;margin:25px 0;color:#67544b}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 21px;border-radius:999px;font-weight:800;transition:.2s}
+.btn-primary{background:var(--brown);color:white;box-shadow:0 9px 20px rgba(123,89,72,.22)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-secondary{background:white;border:1px solid #eadbd0}
+.mochi-art{width:min(430px,80vw);aspect-ratio:1;border-radius:48% 52% 45% 55%;background:linear-gradient(145deg,#fff,#fff7ed);box-shadow:var(--shadow);position:relative;margin:auto;display:grid;place-items:center}
+.mochi{width:210px;height:210px;border-radius:45% 55% 50% 50%;background:linear-gradient(145deg,#fff,#f4e9df);box-shadow:inset -15px -18px 30px rgba(180,135,110,.12),10px 18px 30px rgba(123,89,72,.18);position:relative}
+.mochi:after{content:"";position:absolute;width:105px;height:65px;background:#f4c85b;border-radius:50%;left:52px;top:72px;opacity:.9}
+.spark{position:absolute;font-size:2rem}
+.s1{top:35px;right:55px}.s2{bottom:55px;left:55px}.s3{top:100px;left:35px}
+section{padding:90px 22px}
+.container{max-width:1100px;margin:auto}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.section-head h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--brown);line-height:1.05;margin-bottom:12px}
+.section-head p{color:#75645b}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:28px;border-radius:26px;box-shadow:var(--shadow);border:1px solid rgba(123,89,72,.07)}
+.icon{font-size:2rem;margin-bottom:10px}
+.card h3{color:var(--brown);margin-bottom:7px}
+.products{background:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product{background:var(--cream);border-radius:28px;overflow:hidden;border:1px solid #f0dfd2}
+.product-visual{height:210px;display:grid;place-items:center;background:linear-gradient(135deg,#fde1eb,#fff2c8)}
+.product-mochi{width:115px;height:115px;border-radius:48%;background:#fff;box-shadow:10px 14px 20px rgba(123,89,72,.16);position:relative}
+.product-mochi:after{content:"";position:absolute;width:58px;height:38px;border-radius:50%;background:var(--fill,#f4c85b);left:29px;top:39px}
+.product-body{padding:22px}
+.tag{display:inline-block;font-size:.75rem;font-weight:800;background:white;border-radius:99px;padding:5px 10px;margin-bottom:9px;color:var(--brown)}
+.product-body h3{color:var(--brown);font-size:1.3rem}
+.product-body p{font-size:.94rem;color:#75645b;margin-top:6px}
+.story{background:linear-gradient(135deg,#fff5f8,#fffaf3)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.quote{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;line-height:1.1;color:var(--brown)}
+.quote span{color:var(--pink-dark)}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.value{background:white;border-radius:16px;padding:13px 15px;font-weight:700;box-shadow:0 5px 18px rgba(93,62,49,.07)}
+.impact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.impact .card{min-height:210px}
+.contact{background:var(--brown);color:white}
+.contact .section-head h2{color:white}
+.contact .section-head p{color:#f5e9e0}
+.contact-box{max-width:760px;margin:auto;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:30px;border-radius:28px;text-align:center}
+.contact-box a{display:inline-block;margin-top:15px;background:var(--pink);color:var(--dark);padding:13px 20px;border-radius:999px;font-weight:850}
+footer{background:#332722;color:#dbcfc7;text-align:center;padding:25px 20px;font-size:.9rem}
+@media(max-width:800px){
+ .nav-links{display:none}
+ .hero-grid,.story-grid,.impact{grid-template-columns:1fr}
+ .hero{padding-top:105px}
+ .cards,.product-grid{grid-template-columns:1fr}
+ h1{letter-spacing:-2px}
+ .mochi-art{margin-top:10px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#inicio">Han Sumaq <span>🍡</span> Mochis</a>
+    <div class="nav-links">
+      <a href="#nosotros">Nosotros</a><a href="#sabores">Sabores</a><a href="#propuesta">Propuesta</a><a href="#impacto">Impacto</a><a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">🇯🇵 + 🇵🇪 Fusión japonesa-peruana</div>
+      <h1>Un viaje de <span>Japón a Perú</span> en un solo bocado.</h1>
+      <p>Descubre Han Sumaq Mochis: una propuesta creativa de mochis artesanales con rellenos inspirados en sabores representativos del Perú.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#sabores">Descubrir sabores</a>
+        <a class="btn btn-secondary" href="#nosotros">Conocer la marca</a>
+      </div>
+    </div>
+    <div class="mochi-art" aria-label="Ilustración decorativa de un mochi">
+      <span class="spark s1">✨</span><span class="spark s2">🌸</span><span class="spark s3">🍋</span>
+      <div class="mochi"></div>
+    </div>
+  </div>
+</header>
+
+<section id="nosotros">
+  <div class="container">
+    <div class="section-head">
+      <h2>Más que un postre</h2>
+      <p>Una experiencia dulce, innovadora y con identidad cultural.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">🍡</div><h3>Sabor único</h3><p>Combinamos la suavidad del mochi con rellenos creativos inspirados en el Perú.</p></article>
+      <article class="card"><div class="icon">💗</div><h3>Hecho con amor</h3><p>Buscamos una presentación atractiva y una experiencia especial en cada bocado.</p></article>
+      <article class="card"><div class="icon">🌱</div><h3>Consumo responsable</h3><p>Promovemos empaques ecoamigables y una propuesta más consciente con el entorno.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="sabores">
+  <div class="container">
+    <div class="section-head">
+      <h2>Sabores que cuentan una historia</h2>
+      <p>Texturas suaves, cremosas y crujientes en combinaciones pensadas para sorprender.</p>
+    </div>
+    <div class="product-grid">
+      <article class="product">
+        <div class="product-visual"><div class="product-mochi" style="--fill:#f4c85b"></div></div>
+        <div class="product-body"><span class="tag">Fresco & tropical</span><h3>Maracuyá</h3><p>Un relleno inspirado en uno de los sabores más representativos y vibrantes del Perú.</p></div>
+      </article>
+      <article class="product">
+        <div class="product-visual"><div class="product-mochi" style="--fill:#f8df9c"></div></div>
+        <div class="product-body"><span class="tag">Cítrico & cremoso</span><h3>Pie de limón</h3><p>La inspiración del clásico pie de limón llevada a una experiencia suave y diferente.</p></div>
+      </article>
+      <article class="product">
+        <div class="product-visual"><div class="product-mochi" style="--fill:#9a7057"></div></div>
+        <div class="product-body"><span class="tag">Crujiente & dulce</span><h3>Galleta crocante</h3><p>Combinaciones con galletas que aportan contraste de texturas en cada bocado.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="propuesta">
+  <div class="container story-grid">
+    <div>
+      <div class="section-head" style="text-align:left;margin:0">
+        <h2>Nuestra propuesta</h2>
+        <p>Han Sumaq Mochis fusiona la tradición japonesa con sabores representativos del Perú para crear una alternativa diferente, deliciosa y con identidad propia.</p>
+      </div>
+      <div class="values">
+        <div class="value">✨ Innovación constante</div><div class="value">🌸 Artesanal</div>
+        <div class="value">💛 Calidad garantizada</div><div class="value">🌿 Natural</div>
+        <div class="value">🎀 Presentación atractiva</div><div class="value">🍡 Auténtico</div>
+      </div>
+    </div>
+    <div>
+      <p class="quote">“Un viaje de <span>Japón a Perú</span> en un solo bocado.”</p>
+    </div>
+  </div>
+</section>
+
+<section id="impacto">
+  <div class="container">
+    <div class="section-head">
+      <h2>Un emprendimiento con propósito</h2>
+      <p>Además de ofrecer una experiencia diferente, la propuesta busca generar valor para las personas y el entorno.</p>
+    </div>
+    <div class="impact">
+      <article class="card"><div class="icon">🌎</div><h3>Cuidado del ambiente</h3><p>Utilizamos empaques ecoamigables y promovemos hábitos de consumo más responsables, buscando reducir el impacto ambiental.</p></article>
+      <article class="card"><div class="icon">🤝</div><h3>Oportunidades</h3><p>La elaboración, distribución y venta de los productos pueden generar ingresos y oportunidades de empleo para quienes participan en el proceso.</p></article>
+      <article class="card"><div class="icon">🇯🇵🇵🇪</div><h3>Fusión cultural</h3><p>Integramos una preparación internacional con sabores peruanos para crear una propuesta con identidad propia.</p></article>
+      <article class="card"><div class="icon">💡</div><h3>Innovación</h3><p>Buscamos ir más allá de los postres tradicionales y ofrecer una experiencia creativa que las personas quieran probar y compartir.</p></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Misión & visión</h2>
+    </div>
+    <div class="cards">
+      <article class="card"><h3>🎯 Misión</h3><p>Elaborar y ofrecer mochis de alta calidad que fusionen la tradición japonesa con sabores representativos del Perú, brindando una experiencia dulce, innovadora y memorable, mientras promovemos el consumo responsable mediante el uso de empaques ecoamigables.</p></article>
+      <article class="card"><h3>🔭 Visión</h3><p>Ser un emprendimiento reconocido por la innovación y calidad de nuestros mochis, destacando en el mercado peruano mediante la combinación de sabores japoneses y peruanos, ofreciendo productos deliciosos, creativos y sostenibles.</p></article>
+      <article class="card"><h3>💫 Objetivo</h3><p>Llevar alegría y creatividad a nuestros clientes con mochis llenos de sabor, colores y combinaciones originales, creando una experiencia diferente que todos quieran probar y compartir.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="section-head">
+      <h2>¿Listo para probar Han Sumaq?</h2>
+      <p>Haz de tu próximo antojo un pequeño viaje entre Japón y Perú.</p>
+    </div>
+    <div class="contact-box">
+      <strong>Han Sumaq Mochis 🍡</strong>
+      <p>El proyecto incluye una encuesta para conocer mejor a nuestros clientes.</p>
+      <a href="https://forms.gle/9XZgDPLrbaPeJan56" target="_blank" rel="noopener">Ver encuesta</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Han Sumaq Mochis · “Un viaje de Japón a Perú en un solo bocado.”</p>
+</footer>
+</body>
+</html>
